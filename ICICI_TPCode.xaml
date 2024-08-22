@@ -1,0 +1,386 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ICICI_TPCode" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uuam="clr-namespace:UiPath.UIAutomationNext.Activities.Models;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_ICICI_TPCode" Type="OutArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1752,5451.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ICICI_TPCode_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ICICI_TPCode" sap:VirtualizedContainerService.HintSize="1762.4,5386.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="ui:UiElement" Name="outputElement">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">NApplicationCard_1</x:String>
+            <x:String x:Key="SourcePropertyName">OutUiElement</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Name="DataTable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[DataTable]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="1700,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="C:\Users\harsh\Downloads\TodayLoans.xlsx" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1700,5177.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[outputElement]" ScopeGuid="a19dae00-557c-40c4-acee-2b18b12c0a21" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1666.4,4937.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[out_ICICI_TPCode]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0' ReferenceIdx='0' Name='TPCode'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0 Url' ReferenceIdx='1' Name='URL'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-1' ReferenceIdx='2' Name='BankName'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-2' ReferenceIdx='3' Name='City'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='fulltext' name2='Column-0 Url' attr2='href' /&gt;&lt;column name='Column-1' attr='fulltext' /&gt;&lt;column name='Column-2' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="1604,189.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="a19dae00-557c-40c4-acee-2b18b12c0a21" Version="V3">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://botsdna.com/LoanStatus/ICICI.html" DesignTimeRectangle="399, 127, 1140, 485" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="96831037-60f1-4ae7-b0d8-99ab289e2e07" InformativeScreenshot="1e45bbd8683c40ac3db2fde75dbc8868.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='botsdna.com/LoanStatus/ICICI.html' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[out_ICICI_TPCode]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1604,4657.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1570.4,4467.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="1508,114.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[&quot;https://botsdna.com/LoanStatus/TP/&quot;+CurrentRow(&quot;TPCode&quot;).ToString+&quot;.html&quot;]" Version="V3" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1508,176" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[CurrentRow(&quot;TPCode&quot;).ToString+&quot; &quot;+CurrentRow(&quot;BankName&quot;).ToString]" />
+                    <uix:NCheckState DisplayName="Check App State 'No Data Available'" sap:VirtualizedContainerService.HintSize="1508,3948.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="a19dae00-557c-40c4-acee-2b18b12c0a21" Version="V3">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,140" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:Continue sap:VirtualizedContainerService.HintSize="387.2,49.6" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="1005.6,3698.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="943.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[CurrentRow(&quot;TPCode&quot;).ToString+&quot; Data Found&quot;]" />
+                          <If Condition="True" sap:VirtualizedContainerService.HintSize="943.2,3432" sap2010:WorkflowViewState.IdRef="If_1">
+                            <If.Then>
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="909.6,3164" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-0' ReferenceIdx='0' Name='Name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-1' ReferenceIdx='1' Name='Phone'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column-2' ReferenceIdx='2' Name='Status'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='fulltext' name2='Column-0 Url' attr2='href' /&gt;&lt;column name='Column-1' attr='fulltext' /&gt;&lt;column name='Column-2' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="847.2,189.6" sap2010:WorkflowViewState.IdRef="NExtractData_2" InteractionMode="HardwareEvents" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="a19dae00-557c-40c4-acee-2b18b12c0a21" Version="V3">
+                                  <uix:NExtractData.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://botsdna.com/LoanStatus/ICICI.html" DesignTimeRectangle="399, 192, 1140, 485" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="35e2f00d-1dd2-465e-aeb8-6223b8c88dce" InformativeScreenshot="d827a267411f0ab6bd4e85009af578d3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='botsdna.com/LoanStatus/ICICI.html' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                  </uix:NExtractData.Target>
+                                </uix:NExtractData>
+                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="847.2,453.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                                  <ui:ForEachRow.Body>
+                                    <ActivityAction x:TypeArguments="sd:DataRow">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[CurrentRow(&quot;Name&quot;).ToString]" />
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </ui:ForEachRow.Body>
+                                </ui:ForEachRow>
+                                <uix:NForEachUiElement DisplayName="For Each UI Element" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='CurrentElement'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='CurrentLabel_1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='tr' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='3' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="847.2,2432" sap2010:WorkflowViewState.IdRef="NForEachUiElement_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="a19dae00-557c-40c4-acee-2b18b12c0a21" Version="V3">
+                                  <uix:NForEachUiElement.Body>
+                                    <ActivityAction x:TypeArguments="x:Int32">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="784,2141.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                        <Sequence.Variables>
+                                          <Variable x:TypeArguments="x:String" Name="Title" />
+                                          <Variable x:TypeArguments="x:String" Name="Color" />
+                                        </Sequence.Variables>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="uipath-html-title" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="721.6,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" InUiElement="[CurrentElement]" Result="[Title]" Version="V3" />
+                                        <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="bgcolor" DisplayName="Get Attribute 'TD'" sap:VirtualizedContainerService.HintSize="721.6,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" InUiElement="[CurrentElement]" Result="[Color]" ScopeIdentifier="a19dae00-557c-40c4-acee-2b18b12c0a21" Version="V3">
+                                          <uix:NGetAttributeGeneric.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://botsdna.com/LoanStatus/TP/8757575476.html" DesignTimeRectangle="1061, 176, 75, 45" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' aaname='' /&gt;" Guid="6ab13658-90b2-4f49-a3b9-c0a299ce190c" ImageBase64="" InformativeScreenshot="e1dcdb670abb8ccc83c6bcc1c010fdb1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='botsdna.com/LoanStatus/TP/8757575476.html' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                                          </uix:NGetAttributeGeneric.Target>
+                                        </uix:NGetAttributeGeneric>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="721.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Status for rejection &quot;+Title]" />
+                                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="721.6,1304" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                                          <ui:ForEachRow.Body>
+                                            <ActivityAction x:TypeArguments="sd:DataRow">
+                                              <ActivityAction.Argument>
+                                                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow2" />
+                                              </ActivityAction.Argument>
+                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="688,1106.4" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <If Condition="[CurrentRow2(&quot;Phone Number&quot;).ToString().Trim= CurrentLabel_1.Trim]" sap:VirtualizedContainerService.HintSize="625.6,1017.6" sap2010:WorkflowViewState.IdRef="If_2">
+                                                  <If.Then>
+                                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="592,751.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <If Condition="[Color=&quot;red&quot;]" sap:VirtualizedContainerService.HintSize="529.6,557.6" sap2010:WorkflowViewState.IdRef="If_3">
+                                                        <If.Then>
+                                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                                              <Assign.To>
+                                                                <OutArgument x:TypeArguments="x:Object">[CurrentRow2("Approve/Reject")]</OutArgument>
+                                                              </Assign.To>
+                                                              <Assign.Value>
+                                                                <InArgument x:TypeArguments="x:Object">["Rejected"]</InArgument>
+                                                              </Assign.Value>
+                                                            </Assign>
+                                                          </Sequence>
+                                                        </If.Then>
+                                                        <If.Else>
+                                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                                              <Assign.To>
+                                                                <OutArgument x:TypeArguments="x:Object">[CurrentRow2("Approve/Reject")]</OutArgument>
+                                                              </Assign.To>
+                                                              <Assign.Value>
+                                                                <InArgument x:TypeArguments="x:Object">["Accepted"]</InArgument>
+                                                              </Assign.Value>
+                                                            </Assign>
+                                                          </Sequence>
+                                                        </If.Else>
+                                                      </If>
+                                                      <Assign sap:VirtualizedContainerService.HintSize="529.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:Object">[CurrentRow2("Reason")]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:Object">[Title]</InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                    </Sequence>
+                                                  </If.Then>
+                                                  <If.Else>
+                                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </Sequence>
+                                                  </If.Else>
+                                                </If>
+                                              </Sequence>
+                                            </ActivityAction>
+                                          </ui:ForEachRow.Body>
+                                        </ui:ForEachRow>
+                                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="721.6,131.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </uix:NForEachUiElement.Body>
+                                  <uix:NForEachUiElement.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://botsdna.com/LoanStatus/TP/8757575476.html" DesignTimeRectangle="800, 194, 338, 341" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TBODY' /&gt;" Guid="652201e0-9385-4ec0-9a8e-ee7d7bbd83ac" InformativeScreenshot="76d77f4f7044a3191d46340b8ffc41eb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='botsdna.com/LoanStatus/TP/8757575476.html' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                  </uix:NForEachUiElement.Target>
+                                  <uix:NForEachUiElement.Variables>
+                                    <Variable x:TypeArguments="ui:UiElement" Name="CurrentElement" />
+                                    <Variable x:TypeArguments="x:String" Name="CurrentElement_Label" />
+                                    <Variable x:TypeArguments="x:String" Name="CurrentLabel_1" />
+                                  </uix:NForEachUiElement.Variables>
+                                  <uix:NForEachUiElement.VariablesMetadata>
+                                    <scg:List x:TypeArguments="uuam:VariableMetadata" x:Key="Column0" Capacity="4">
+                                      <uuam:VariableMetadata Name="CurrentElement" Type="ui:UiElement" />
+                                      <uuam:VariableMetadata Name="CurrentElement_Label" Type="x:String" />
+                                    </scg:List>
+                                    <scg:List x:TypeArguments="uuam:VariableMetadata" x:Key="Column1" Capacity="4">
+                                      <uuam:VariableMetadata Name="CurrentLabel_1" Type="x:String" />
+                                    </scg:List>
+                                  </uix:NForEachUiElement.VariablesMetadata>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NForEachUiElement>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable BrowserURL="https://botsdna.com/LoanStatus/TP/6473648767.html" CVScreenId="be637b8a-33f2-4062-9ae9-94e125d82be0" CvTextArea="812, 230, 311, 32" CvTextArgument="No Data Available" CvType="Text" DesignTimeRectangle="19, 223, 1900, 47" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='' aaname='No Data Available' check:innerText='No Data Available' /&gt;" Guid="f213b368-68d1-4ec9-87c2-b8fc15c6dead" InformativeScreenshot="29ff7fee5e53a7a18ce5fe7d7ec72ff9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='botsdna.com/LoanStatus/TP/6473648767.html' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                      </uix:NCheckState.Target>
+                    </uix:NCheckState>
+                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[DataTable]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="1508,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="C:\Users\harsh\Downloads\TodayLoans.xlsx" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="08f70b14a48145b92acd89f8a7dc7082.jpg" Selector="&lt;html app='chrome.exe' title='botsdna.com/LoanStatus/ICICI.html' /&gt;" Title="botsdna.com/LoanStatus/ICICI.html" Url="https://botsdna.com/LoanStatus/ICICI.html" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
